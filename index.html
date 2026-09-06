@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jungle Dash</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="game-shell">
+		<header class="hud" aria-label="Game status">
+			<div class="brand-mark"><span class="brand-leaf">◆</span> JUNGLE DASH</div>
+			<div class="stat"><span class="stat-label">Score</span><strong id="score">0</strong></div>
+			<div class="stat"><span class="stat-label">Lives</span><strong id="lives">3</strong></div>
+			<div class="stat"><span class="stat-label">Time</span><strong id="time">60</strong></div>
+		</header>
+
+		<section class="game-frame" aria-label="Jungle Dash game">
+			<canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+			<div id="titleScreen" class="screen active">
+				<p class="eyebrow">A tiny adventure in the emerald wilds</p>
+				<h1>JUNGLE<br><span>DASH</span></h1>
+				<p class="screen-copy">Run, leap, and collect the sun-gold relics.<br>Something grumpy is guarding the trail.</p>
+				<button id="startButton" class="primary-button">PLAY GAME <span>→</span></button>
+				<p class="hint">ARROW KEYS / A D TO RUN &nbsp;•&nbsp; SPACE TO JUMP</p>
+			</div>
+
+			<div id="endScreen" class="screen">
+				<p id="endEyebrow" class="eyebrow">The trail is complete</p>
+				<h2 id="endTitle">YOU WIN!</h2>
+				<p id="endMessage" class="screen-copy">The jungle crown is yours.</p>
+				<button id="againButton" class="primary-button">PLAY AGAIN <span>↻</span></button>
+			</div>
+
+			<div class="touch-controls" aria-label="Touch controls">
+				<button data-control="left" aria-label="Move left">←</button>
+				<button data-control="right" aria-label="Move right">→</button>
+				<button data-control="jump" aria-label="Jump">↑</button>
+			</div>
+		</section>
+
+		<footer class="game-footer"><span><i class="dot"></i> EXPEDITION 01</span><span>THE CANOPY TRAIL</span><span>BEST RUN: <b id="bestScore">0</b></span></footer>
+	</main>
+	<script src="game.js"></script>
+</body>
+</html>
